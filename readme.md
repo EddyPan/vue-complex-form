@@ -1,9 +1,12 @@
-# ComplexForm 复杂表单
+# vue-complex-form 复杂表单
 
 该组件基于VUE和ElementUI设计开发，通过弹出Dialog对话框+标签页的形式，承载复杂表单的新建、编辑、克隆、详情展示等操作。本方案本质是将复杂表单拆分为多个子表单，通过分步填写、验证，提升页面交互体验，降低复杂表单开发门槛，提升开发效率。
 包含MainForm组件和SubFormMixin混入两部分。
 
-![演示](/assets/demo.gif "表单演示")
+![演示](./assets/demo.gif "表单演示")
+
+## 引用依赖
+    npm install vue-complex-form
 
 ## MainForm 主表单
 
@@ -11,7 +14,7 @@
 
 ### 引入主表单组件
 ```javascript
-import { MainForm } from '@/components/ComplexForm'
+import { MainForm } from 'vue-complex-form'
 
 components: { MainForm }
 ```
