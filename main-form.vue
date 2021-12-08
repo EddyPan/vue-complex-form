@@ -10,7 +10,7 @@
     <el-tabs v-model="activeForm" :before-leave="handleLeaveTab">
       <template v-for="form in filtedFormDataList">
         <el-tab-pane :key="form.key" :name="`form-${form.key}`">
-          <span slot="label">{{ form.name }} <i v-if="!form.valid" class="el-icon-warning" style="color: #F56C6C" /></span>
+          <span slot="label">{{ form.name }} <em v-if="!form.valid" class="el-icon-warning" style="color: #F56C6C" /></span>
           <component :is="form.component"
                      :ref="form.key"
                      :form-key="form.key"
