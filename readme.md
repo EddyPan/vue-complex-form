@@ -133,7 +133,7 @@ handleSubmit(formData) {
 ## SubForm 子表单
 每个子表单需要开发人员按照实际需求开发，本方案将提供子表单mixin，开发人员只需关注业务逻辑编写。
 
-## 引入子表单混入
+### 引入子表单混入
 
 ```javascript
 import { SubFormMixin } from '@/components/ComplexForm'
@@ -141,7 +141,7 @@ import { SubFormMixin } from '@/components/ComplexForm'
 mixins: [SubFormMixin]
 ```
 
-## html模板编写
+### 编写html模板
 
 **注意：** 如果某个字段需要和其他子表单通信，请主动emit field-change事件，通过linkChannel进行数据交互
 
@@ -209,3 +209,5 @@ watch: {
 | data         | 表单数据                                               | object | {}     |
 | link-channel | 表单字段变动监听通道                                   | object | {}     |
 
+## 鸣谢
+感谢[@why19](https://juejin.cn/user/1794018999272525)的无私奉献，本方案主要分灵感来自于why19的[vue+element大型表单解决方案](https://juejin.cn/post/6964330851173662757)
