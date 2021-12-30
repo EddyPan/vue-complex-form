@@ -17,7 +17,8 @@
                      :data="form.data"
                      :link-channel="linkChannel"
                      @validate="handleValidate"
-                     @field-change="handleFieldChange" />
+                     @field-change="handleFieldChange"
+                     @event="handleSubFormEvent" />
         </el-tab-pane>
       </template>
     </el-tabs>
@@ -192,6 +193,12 @@ export default {
     // 将发生变换的数据装在到linkChannel中
     handleFieldChange(key, value) {
       this.$set(this.linkChannel, key, value)
+    },
+    // 将子表单的事件传递到父组件中
+    handleSubFormEvent(event, ...args) {
+      if (typeof event === 'string') {
+        this.$emit(event, ...args)
+      }
     },
     // 验证所有子表单，并组装为formData
     buildFormData() {

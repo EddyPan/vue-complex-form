@@ -1,6 +1,6 @@
 {
   "name": "vue-complex-form",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue 复杂表单方案",
   "main": "index.js",
   "keywords": [
@@ -11,5 +11,9 @@
     "element-ui"
   ],
   "author": "edwardpan2010@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EddyPan/vue-complex-form.git"
+  }
 }
